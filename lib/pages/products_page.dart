@@ -85,7 +85,8 @@ class _ProductsPageState extends State<ProductsPage> {
                     ),
                   ),
                   Expanded(
-                    child: ListView.builder(
+                    child: _isInit? Center(child: CircularProgressIndicator(color: AppColors.totalColor,))
+                        : ListView.builder(
                       padding: EdgeInsets.all(8),
                       shrinkWrap: true,
                       physics: AlwaysScrollableScrollPhysics(),
@@ -116,7 +117,10 @@ class _ProductsPageState extends State<ProductsPage> {
       } else {
         productListModel.add(productListInfo);
         productList.addAll(productListModel.elementAt(0).menu);
-        setState(() {});
+        setState(() {
+          productList;
+          _isInit = false;
+        });
       }
     } catch (e) {
       print(e);
