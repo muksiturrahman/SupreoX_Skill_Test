@@ -17,10 +17,6 @@ Future<dynamic> initProductListInfo(BuildContext context,) async {
     // 'limit': "10",
   };
 
-  Map<String, String> headerMap = {
-    "Authorization": "Bearer c41048d9ef7f0ca276ffe639397af571"
-  };
-
   var response = await BaseClient().getMethodWithoutHeader(url);
 
   if (response != null) {
