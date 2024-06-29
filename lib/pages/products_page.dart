@@ -276,7 +276,7 @@ class _ProductsPageState extends State<ProductsPage> {
           SizedBox(height: 10,),
           _buildSummaryRow('Vat(5%) Service Charge included (5%)', vat, true),
           SizedBox(height: 10,),
-          Divider(color: Colors.deepOrange,height: 2,),
+          Divider(color: AppColors.totalColor,height: 2,),
           _buildSummaryRow('Total', total, false),
         ],
       ),
